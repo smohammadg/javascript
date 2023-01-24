@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      Searh in Array:--
+        . Understand issue and solution with whiteboard
+        . Make array, define the position
+        . Use Loop to delete element
+        . delete element with text input and button
+     -->
+
+    <script> 
+        let marks = [80,89,77,67,59,93,74];
+        console.log(marks);
+        let index = undefined;
+        let newElement = 93;
+        for(i = 0; i <= marks.length; i++ ){
+            // console.log('i:',i); // 0 to 6 index will print
+            console.log(marks[i]); // 80,89,77...
+            if(marks[i] === newElement){  // search element
+                index = i;
+                break; // if element found, loop will break;
+                
+            }
+        } console.log(`Element Found, ${index} position, New Element is ${newElement}`);
+    </script>
+     <div>
+        <input
+          type="text"
+          class="form-control"
+          id="positionNum"
+          placeholder="Enter position"
+        />
+        <input
+          type="text"
+          class="form-control"
+          id="marksId"
+          placeholder="Enter Runs"
+        />
+        <button onclick="findElement()">Find element</button>
+      </div>
+  </body>
+</html>

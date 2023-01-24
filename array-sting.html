@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" src="./style.css" />
+  </head>
+  <body>
+    <script>
+      let arraySting1 = () => {
+        let innputData = document.getElementById("inputText").value;
+        let charArray = innputData.split("");
+
+        for (let i = 0; i < innputData.length; i++) {
+            for(let j = i + 1; j< string.length;j++){
+                if( arr[i] === arr[j]){
+                    return false;
+                }
+            }
+        }
+        return true;
+      };
+    </script>
+    <div class="form">
+      <input type="text" id="inputText" placeholder="Enter Text / Number" />
+      <button type="button" onclick="arraySting1()">Enter Number</button>
+    </div>
+
+    <script>
+    //   for (let c = 0; c < charArray.length; c++) {
+    //     console.log(c, charArray[c]);
+    //   }
+    //   console.log(charArray);
+    </script>
+  </body>
+</html>

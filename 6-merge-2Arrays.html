@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- 
+      Merge 2 Arrays:--
+        . Understand issue and solution with whiteboard
+        . Make array, define the position
+        . Use Loop to delete element
+        . delete element with text input and button
+     -->
+     <!-- For Loop -->
+     <!-- concat() function -->
+     <!-- spread operator ...array1, ...array2 -->
+    <script> 
+    let marks = [88,77,66,55,56,67,78];
+    let runs = [22,33,44,55,66,23,45];
+    let emp = [];
+    for(i = 0; i <= marks.length; i++){
+      console.log('third Array',emp);
+      
+        emp[i] = marks[i]; 
+        // console.log('--', marks[i]);
+        // emp.push(marks[i]);
+    } 
+    console.log('third Array',emp);
+
+    for(i = 0; i<=runs.length; i++){
+      emp[marks.length + i] = runs[i];
+    }
+    console.log('emp Array:',emp);
+
+    // concat()
+    let emp2  = [];
+    emp2 = runs.concat(marks);
+    console.log('emp2: ',emp2);
+
+    let marks2 = [88,77,66,55,56,67,78];
+    let runs2 = [22,33,44,55,66,23,45];
+    let newMerge = marks2.concat(runs2);
+    console.log();
+    console.log('2',newMerge);
+    console.log(typeof(newMerge)); // object
+
+    // reverse Array
+    console.log(marks2.reverse());
+    console.log(typeof(marks2));
+    let emp3 = [];
+    console.log(typeof(emp3));
+    emp3 = [...marks2, ...runs2];
+    console.log(emp3);
+    console.log(emp3.reverse());
+
+
+    // merge 2 array with sorting assending
+    let marks3 = [88,77,66,55,56,67,78];
+    let runs3 = [22,33,44,55,66,23,45];
+
+    let emp4 = runs3.concat(marks2); 
+    
+    console.log('emp4: ', emp4.sort());
+
+console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+    // Merge With While Loop
+
+    let data1 = [88,77,66,55,56,67,78];
+    let data2 = [22,33,44,55,66];
+    let data3 = [];
+
+    let d1 = 0;
+    let d2 = 0;
+    let d3 = 0;
+    while(d1<data1.length && d2<data2.length){ // iterate loop untile its length 
+      if(data1[d1] < data2[d2]){ // compare 2 array values of which one small
+        data3[d3] = data1[d1]; // assign data1 value to data3
+        console.log('mid data3', data3);
+        d1++; // increasing d1 because data1 array next value will check
+      }  else {
+        data3[d3] = data2[d2];
+        d2++;
+      } 
+      d3++; // finally d3 increase because adding next value in data3
+    }
+    while (d1 < data1.length) {
+      data3[3] = data1[d1];
+      d1++;
+      d3++;
+    } console.log('data 3: ',data3);
+    console.log(typeof(data3));
+    </script>
+  </body>
+</html>

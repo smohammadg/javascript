@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // Recursion Data Structure:-- iterate by it self function
+    let myRecursion = function(){
+
+    } 
+
+    // let reCursionFun = () => {
+    //     console.log('Recursion fun calling');
+    //     reCursionFun(); // it jenerate Infanite loop
+       
+    // }
+    // reCursionFun();
+
+    // factorial value of 5
+    let reCursionFun = (item) => { 
+       if( item == 0 ){
+           return 1;
+       }
+       console.log(item);
+       return item * reCursionFun(item - 1);
+    //     5* (5-1 = 4) 
+    //     5* (4-1 = 3)
+    //     5* (3-1 = 2) 
+    //     5* (2-1 = 3)
+    //     5* (1-1 = 0)
+    }
+    let data = 5;
+    console.log(reCursionFun(data));
+    // 5*4*3*2*1 ;
+
+    let fruits = ['Mango','Banana','Pinapple','KiWi',];
+    let i = 0;
+    while(i < fruits.length){
+        // console.log(i);
+        console.log(fruits[i]);
+        // console.log(fruits);
+        i++;
+    }
+    // console.log(fruits);
+    </script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+    let reCursionFun = (item) => { // factorial value of 5
+        //    console.log('Function Calling',item);
+           if( item == 0 ){
+            //    return 1; 
+               return 1;
+           }
+           console.log('-',item);
+            return item * reCursionFun(item - 1);
+            // console.log('--',item); 
+            // x ++;
+            // x + 1;
+            // continue;
+            // break;
+           
+        }
+        let data = 5;
+        console.log(reCursionFun(data));
+     -->
+</body>
+</html>

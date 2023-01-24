@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Sorting:--
+        // Bubble Sorting
+        // Take Double Array
+        let marks = [40,30,12,25];
+        // if you take single loop, how many number of elements, that many times loop will rotate.
+
+        // with loop, our Array will not sorte, we have 4 elements
+        // 1 loop 4 elements,  for sorting 
+        // size x size  we need
+        //  4 x 4 = 16 elements
+
+        for(let i = 0; i<marks.length; i++){
+            // console.log(i);
+            for(j=0;j<marks.length; j++){
+                // console.log(marks);
+                if(marks[j] > marks[j+1]){
+                    let temp = marks[j];
+                    marks[j] = marks[j+1]; 
+                    marks[j+1] = temp; 
+                }
+            }
+        }
+        console.log(marks);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
